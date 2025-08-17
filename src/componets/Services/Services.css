@@ -1,0 +1,121 @@
+.service-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: #fff8e6;
+}
+
+.service-header h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #B8860B;
+}
+
+.service-header p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1rem;
+  color: #B8860B;
+  line-height: 1.6;
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  color: #B8860B;
+}
+
+.service-item {
+  width: 220px;
+  min-width: 220px; /* Ensure minimum width */
+  padding: 20px;
+  background: #fff8e6;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px #645c3f;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 12px #B8860B;
+}
+
+.service-item.active {
+  /* Allow expansion when active */
+  width: auto;
+  max-width: 100%;
+}
+
+.service-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.service-item h3 {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #B8860B;
+  flex-shrink: 0; /* Prevent title from shrinking */
+}
+
+/* Details with pointing style */
+.service-details {
+  margin-top: 15px;
+  text-align: left;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 280px; /* Limit width for better readability */
+}
+
+.service-details li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #d4af37;
+  word-wrap: break-word; /* Handle long text */
+}
+
+.service-details li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #d4af37;
+  font-weight: bold;
+}
+
+.dark .service-item {
+  background: #222;
+  color: #fff8e6;
+}
+
+.dark .service-section {
+  background-color: #222;
+}
+@media (max-width: 768px) {
+  .service-list {
+    flex-direction: column;
+    align-items: stretch; /* stretch items full width */
+    width: 100%;
+  }
+
+  .service-item {
+    width: 100%;   /* full width */
+    max-width: none; /* remove 350px cap */
+  }
+
+  .service-item.active {
+    width: 100%;
+    max-width: none;
+  }
+}

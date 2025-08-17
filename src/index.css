@@ -1,0 +1,23 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.continer{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #222;
+    transition: 0.5s;
+    
+}
+
+.continer.light{
+    background-color: #fff8e6;
+}
+
+.continer.dark{
+    background-color: #222;
+}

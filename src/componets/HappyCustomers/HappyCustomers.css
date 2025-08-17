@@ -1,0 +1,106 @@
+/* HappyCustomers.css */
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.portfolio-title {/* font */
+
+  font-weight: 300;
+  margin-bottom: 40px;
+  color: #B8860B;
+  letter-spacing: 1px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  grid-auto-flow: dense;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px #B8860B;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item.medium {
+  grid-row: span 2;
+}
+
+.portfolio-item.tall {
+  grid-row: span 3;
+}
+
+.portfolio-item.large {
+  grid-row: span 2;
+  grid-column: span 1;
+}
+
+.portfolio-item.wide {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.portfolio-item.square {
+  grid-row: span 2;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-image {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 20px 15px;
+  }
+  
+  .portfolio-title {
+    font-size: 2rem;
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  
+  .portfolio-item.wide {
+    grid-column: span 1;
+  }
+  
+  .portfolio-item.large {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .portfolio-item.wide,
+  .portfolio-item.large {
+    grid-column: span 1;
+  }
+}

@@ -1,0 +1,217 @@
+/* .navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 15px 7%;
+    transition: 0.5s;
+}
+
+.logo{
+    width: 160px;
+    cursor: pointer;
+}
+
+ul{
+    flex: 1;
+    list-style: none;
+    text-align: center
+}
+
+ul li{
+    display: inline-block;
+    margin: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.toggle-icon{
+    width: 30px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    background-color: #242424;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+
+.search input{
+    padding: 6px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    max-width: 200px;
+}
+
+.search input::placeholder{
+    color: #fff;
+}
+
+
+.search img{
+    width: 20px;
+    cursor: pointer;
+}
+
+.dark .navbar{
+    background-color: #100f06;
+    color: #fff;
+}
+
+.dark .search{
+    background-color: #fff;
+}
+
+.dark .search input{
+    color: #100f06;;
+}
+
+.dark .search input::placeholder{
+    color: #100f06;;
+} */
+
+
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff8e6; /* Off-white */
+    color: #B8860B;
+    padding: 15px 7%;
+    transition: 0.5s;
+    position: relative;
+    position: sticky;   /* ✅ Sticky navbar */
+    top: 0;             /* ✅ Stick to the very top */
+    z-index: 1000;      /* ✅ Keeps it above other content */
+}
+
+.logo {
+    width: 160px;
+    cursor: pointer;
+}
+
+ul {
+    flex: 1;
+    list-style: none;
+    text-align: center;
+}
+
+ul li {
+    display: inline-block;
+    margin: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Social icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+}
+
+.social-icons a {
+    color: #B8860B;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffbf00; /* gold highlight */
+}
+
+.toggle-icon {
+    width: 25px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+/* Dark Mode */
+.dark .navbar {
+    background-color: #222;
+    color: #B8860B;
+}
+
+.dark .social-icons a {
+    color: #B8860B;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #B8860B;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .navbar {
+        padding: 15px 4%;
+        flex-wrap: wrap;
+    }
+
+    .hamburger {
+        display: flex;
+        order: 4;
+    }
+
+    .logo {
+        width: 120px;
+        order: 1;
+    }
+
+    .toggle-icon {
+        width: 25px;
+        margin-left: 10px;
+        order: 2;
+    }
+
+    .social-icons {
+        order: 3;
+        font-size: 18px;
+    }
+
+    ul {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: inherit;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: 0.3s;
+        justify-content: center;
+        z-index: 999;
+    }
+
+    ul.active {
+        left: 0;
+    }
+
+    ul li {
+        margin: 20px 0;
+        font-size: 22px;
+        display: block;
+    }
+}
+
