@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./services.css";
+import "./Services.css";
 import bridal from "../../assets/Services/bridal.png"
 import party from "../../assets/Services/party.png";
 import cam from "../../assets/Services/cam.png";
