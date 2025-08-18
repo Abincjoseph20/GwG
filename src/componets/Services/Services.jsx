@@ -32,16 +32,6 @@ function Service() {
       ]
     },
     {
-      title: "Professional & Editorial Makeup",
-      image: cam, // put your image path
-      details: [
-        "Portfolio Makeup",
-        "Fashion Show Makeup",
-        "Editorial & Magazine Looks",
-        "Camera-ready HD Makeup"
-      ]
-    },
-    {
       title: "Grooming & Personal Styling",
       image: grooming, // put your image path
       details: [
@@ -51,6 +41,16 @@ function Service() {
         "Wardrobe Guidance"
       ]
     },
+    {
+      title: "Professional & Editorial Makeup",
+      image: cam, // put your image path
+      details: [
+        "Portfolio Makeup",
+        "Fashion Show Makeup",
+        "Editorial & Magazine Looks",
+        "Camera-ready HD Makeup"
+      ]
+    }, 
     {
       title: "Add-on Services",
       image: addon, // put your image path
