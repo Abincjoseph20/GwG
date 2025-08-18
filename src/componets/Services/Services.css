@@ -46,12 +46,13 @@
   box-shadow: 0 6px 12px #B8860B;
 }
 
-/* Default active state (desktop) */
+/* Active expands naturally */
 .service-item.active {
   width: auto;
   max-width: 100%;
 }
 
+/* Service Image */
 .service-img {
   width: 100px;
   height: 100px;
@@ -67,7 +68,7 @@
   flex-shrink: 0;
 }
 
-/* Details with pointing style */
+/* Details with pointing style (accordion style) */
 .service-details {
   margin-top: 15px;
   text-align: left;
@@ -75,6 +76,17 @@
   padding: 0;
   width: 100%;
   max-width: 280px;
+
+  /* hidden by default */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.service-item.active .service-details {
+  max-height: 500px; /* enough to fit content */
+  opacity: 1;
 }
 
 .service-details li {
@@ -94,6 +106,7 @@
   font-weight: bold;
 }
 
+/* Dark Mode */
 .dark .service-item {
   background: #222;
   color: #fff8e6;
@@ -116,11 +129,22 @@
     max-width: none;
   }
 
-  /* ✅ Override desktop active styles */
+  /* Active expands naturally */
   .service-item.active {
     width: 100%;
     max-width: none;
-    max-height: 200px;   /* Limit height */
-    overflow-y: auto;    /* Scroll if content is too long */
   }
+}
+
+
+
+.service-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.service-item.active .service-details {
+  max-height: 500px;
+  opacity: 1;
 }

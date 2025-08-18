@@ -87,7 +87,7 @@ ul li{
     justify-content: space-between;
     background-color: #fff8e6; /* Off-white */
     color: #B8860B;
-    padding: 15px 7%;
+    padding: 8px 5%;
     transition: 0.5s;
     position: relative;
     position: sticky;   /* ✅ Sticky navbar */
