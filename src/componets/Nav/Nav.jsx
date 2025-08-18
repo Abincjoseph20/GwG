@@ -31,11 +31,11 @@ function Nav({ theam, seTheam }) {
 
       {/* Navigation Menu */}
       <ul className={isMenuOpen ? 'nav-menu active' : 'nav-menu'}>
-        <li onClick={closeMenu}>Home</li>
-        <li onClick={closeMenu}>About</li>
-        <li onClick={closeMenu}>Services</li>
-        <li onClick={closeMenu}>Happy customer</li>
-        <li onClick={closeMenu}>Contact</li>
+        <li><a href="#home" onClick={closeMenu}>Home</a></li>
+        <li ><a href="#about" onClick={closeMenu}>About</a></li>
+        <li ><a href="#services" onClick={closeMenu}>Services</a></li>
+        <li ><a href="#customers" onClick={closeMenu}>Happy customer</a></li>
+        <li ><a href="#contact" onClick={closeMenu}>Contact</a>t</li>
       </ul>
 
       {/* Social Icons */}

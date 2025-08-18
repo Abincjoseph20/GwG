@@ -5,7 +5,7 @@ import gold from "../../assets/Homes/gold.png";
 
 function About() {
   return (
-    <section className="about">
+    <section id="about"  className="about">
       <div className="about-container">
         {/* Image Left */}
         <div className="about-image">

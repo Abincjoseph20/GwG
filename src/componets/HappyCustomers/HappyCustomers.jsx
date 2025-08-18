@@ -91,7 +91,7 @@ function HappyCustomers() {
   ];
 
   return (
-    <div className="portfolio-container">
+    <div id="customers" className="portfolio-container">
       <h1 className="portfolio-title">Happy Customers</h1>
       
       <div className="portfolio-grid">
