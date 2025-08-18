@@ -28,7 +28,7 @@
 
 .service-item {
   width: 220px;
-  min-width: 220px; /* Ensure minimum width */
+  min-width: 220px;
   padding: 20px;
   background: #fff8e6;
   border-radius: 12px;
@@ -46,8 +46,8 @@
   box-shadow: 0 6px 12px #B8860B;
 }
 
+/* Default active state (desktop) */
 .service-item.active {
-  /* Allow expansion when active */
   width: auto;
   max-width: 100%;
 }
@@ -57,14 +57,14 @@
   height: 100px;
   object-fit: contain;
   margin-bottom: 15px;
-  flex-shrink: 0; /* Prevent image from shrinking */
+  flex-shrink: 0;
 }
 
 .service-item h3 {
   font-size: 1.1rem;
   margin: 10px 0;
   color: #B8860B;
-  flex-shrink: 0; /* Prevent title from shrinking */
+  flex-shrink: 0;
 }
 
 /* Details with pointing style */
@@ -74,7 +74,7 @@
   list-style: none;
   padding: 0;
   width: 100%;
-  max-width: 280px; /* Limit width for better readability */
+  max-width: 280px;
 }
 
 .service-details li {
@@ -83,7 +83,7 @@
   margin-bottom: 8px;
   font-size: 0.95rem;
   color: #d4af37;
-  word-wrap: break-word; /* Handle long text */
+  word-wrap: break-word;
 }
 
 .service-details li::before {
@@ -102,20 +102,25 @@
 .dark .service-section {
   background-color: #222;
 }
+
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .service-list {
     flex-direction: column;
-    align-items: stretch; /* stretch items full width */
+    align-items: stretch;
     width: 100%;
   }
 
   .service-item {
-    width: 100%;   /* full width */
-    max-width: none; /* remove 350px cap */
+    width: 100%;
+    max-width: none;
   }
 
+  /* ✅ Override desktop active styles */
   .service-item.active {
     width: 100%;
     max-width: none;
+    max-height: 200px;   /* Limit height */
+    overflow-y: auto;    /* Scroll if content is too long */
   }
 }

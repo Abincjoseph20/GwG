@@ -100,17 +100,17 @@ ul li{
     cursor: pointer;
 }
 
-ul {
-    flex: 1;
-    list-style: none;
-    text-align: center;
+.nav-menu {
+  flex: 1;
+  list-style: none;
+  text-align: center;
 }
 
-ul li {
-    display: inline-block;
-    margin: 10px 20px;
-    cursor: pointer;
-    font-size: 18px;
+.nav-menu li {
+  display: inline-block;
+  margin: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
 }
 
 /* Social icons */
@@ -190,25 +190,25 @@ ul li {
         font-size: 18px;
     }
 
-    ul {
-        position: fixed;
-        left: -100%;
-        top: 0;
-        flex-direction: column;
-        background-color: inherit;
-        width: 100%;
-        height: 100vh;
-        text-align: center;
-        transition: 0.3s;
-        justify-content: center;
-        z-index: 999;
-    }
+    .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    background-color: inherit;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    transition: 0.3s;
+    justify-content: center;
+    z-index: 999;
+  }
 
-    ul.active {
+    .nav-menu.active {
         left: 0;
     }
 
-    ul li {
+    .nav-menu li {
         margin: 20px 0;
         font-size: 22px;
         display: block;
