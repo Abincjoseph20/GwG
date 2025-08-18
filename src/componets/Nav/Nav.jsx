@@ -13,7 +13,7 @@ function Nav({ theam, seTheam }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleTheme = () => {
-    theam === 'light' ? seTheam("dark") : seTheam("light");
+    theam === 'dark' ?seTheam("light") : seTheam("dark");
   };
 
   const toggleMenu = () => {

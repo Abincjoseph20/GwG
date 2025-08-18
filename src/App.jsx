@@ -9,7 +9,7 @@ import Contact from './componets/Contact/Contact';
 
 function App() {
   const cureentTheam = localStorage.getItem("cureentTheam");
-  const [theam, seTheam] = useState(cureentTheam ? cureentTheam : 'light');
+  const [theam, seTheam] = useState(cureentTheam ? cureentTheam : 'dark');
 
   useEffect(()=>{
     localStorage.setItem("cureentTheam", theam);
