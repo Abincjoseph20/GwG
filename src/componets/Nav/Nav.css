@@ -89,8 +89,8 @@ ul li{
     color: #B8860B;
     padding: 8px 5%;
     transition: 0.5s;
-    position: relative;
-    position: sticky;   /* ✅ Sticky navbar */
+    height: 110px;
+    position: fixed;   /* ✅ Sticky navbar */
     top: 0;             /* ✅ Stick to the very top */
     z-index: 1000;      /* ✅ Keeps it above other content */
 }
